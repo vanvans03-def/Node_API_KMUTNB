@@ -203,7 +203,7 @@ async function placeOrder(orderData) {
                 products.push({ product: productModel, productSKU: cart[i].quantity });
 
                 let data = await merchantOrder(productModel.storeId.toString());
-                orderMerchantdata.push(data[0]);
+                orderMerchantdata.push(data[0]); 
                 await productModel.save();
 
             } else {
